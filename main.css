@@ -1,45 +1,97 @@
 /*----------------- 전역 CSS -----------------*/
 body{
     font-family: 'SUITE-Regular';
-    font-weight: 400;
-    scroll-behavior: smooth;
+    font-weight: 500;
+    height: auto !important;
 }
 
 html:hover{ /* 웹사이트 접속 시 마우스커서가 바뀌도록 수정*/
     cursor:url("https://black-chi.github.io/bkchiTgdCss/imgres/cursor.png"), auto;
 }
 
-#board-info #board-info-profile-img {
-    width: 4.5em;
-    height: auto;
-    margin-right: 8px;
+/*------------ 게시글 프레임 ------------*/
+#main #main-content>div.frame {
+    transition: all 0.1s linear;
+    
+    border: 1px solid #40BDFF;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 0 0 0 3px #ffffff,
+                0 0 0 5px #40BDFF;
+
 }
 
-#board-info h1>a:not(.badge-live) {
-    padding-left: 30px;
+#main #main-content>div.frame:hover{
+    box-shadow: 0 0 0 3px #ffffff,
+                0 0 0 7px #40BDFF;
+
+}
+
+/*----------------- 헤더 -----------------*/
+#board-info #board-info-profile-img { /*프로필이미지*/
+    width: 6em;
+    height: 6em;
+    float: left !important;
+    border-radius: 50%;
+    border: 3px SOLID #40BDFF; 
+    transition: all 0.1s linear; 
+}
+
+#board-info #board-info-profile-img:hover { /*프로필이미지 호버링*/
+  transform: scale(1.1);
+}
+
+#board-info h1>a:not(.badge-live) { /*스트리머 이름*/
     font-size: 32px!important;
     font-weight: 700;
-    color: #000000;
 }
 
+#board-info h1 { /*헤더 상단 구역*/
+    font-size: 24px;
+    vertical-align: top;
+    padding-top: 15px;
+    border-bottom: 2px dashed gray;
+}
 
-/*----------------- 인원수 -----------------*/
+#board-info #board-info-bottom a{ /*헤더 하단 구역 텍스트*/ 
+    font-size: small;
+    padding-top: 3px;
+}
 
+/*----------------- 접속인원, 점수 ---------------*/
+
+
+.fa-user { /* 현재 접속인원 아이콘 */
+    transition: all 0.1s linear;
+}
 .fa-user:before {
     content: url("https://black-chi.github.io/bkchiTgdCss/imgres/18_3.png");
 }
+.fa-user:hover {
+    content: url("https://black-chi.github.io/bkchiTgdCss/imgres/18_6.png");
+    transform: scale(1.3);
+}
 
-#board-info #viewers-area #viewers:before {
+#board-info #viewers-area /* 현재 접속인원수 텍스트 변경 */
+#viewers:before {
     content: "포식자 곁 캔냥이 ";
     cursor: text;
 }
-
 #board-info #viewers-area {
+    font-size: large;
     font-weight: 900;
     color: rgb(0 169 255);
 }
-
 #board-info #viewers-area #viewers:after {
     content: "마리!"; 
     cursor: text;
+}
+
+/* 현재 점수 */
+#board-info #score-area
+{
+    font-size: large;
+    font-weight: 700;
 }
