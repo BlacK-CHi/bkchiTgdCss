@@ -1,0 +1,30 @@
+/*----------------- 전역 CSS -----------------*/
+
+html{
+    font-family: 'SUITE-Regular';
+    font-weight: 400;
+    scroll-behavior: smooth;
+}
+
+/* 웹사이트 접속 시 마우스커서가 바뀌도록 수정*/
+html:hover{
+    cursor:url(./res/img/cursor.png), auto;
+}
+
+
+/*----------------- 인원수 -----------------*/
+
+#board-info #viewers-area #viewers:before {
+    content: "포식자 곁 캔냥이 ";
+    cursor: text;
+}
+
+#board-info #viewers-area {
+    font-weight: bold;
+    color: rgb(0 169 255);
+}
+
+#board-info #viewers-area #viewers:after {
+    content: "마리!"; 
+    cursor: text;
+}
