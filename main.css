@@ -6,7 +6,7 @@ body{
 }
 
 html:hover{ /* 웹사이트 접속 시 마우스커서가 바뀌도록 수정*/
-    cursor:
+    cursor:url(./imgres/cursor.png), auto;
 }
 
 
