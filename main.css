@@ -31,7 +31,7 @@ html:hover{ /* 웹사이트 접속 시 마우스커서가 바뀌도록 수정*/
 
 /*----------------- 헤더 -----------------*/
 #board-info{
-    height: 6em;
+    height: 7em;
 }
 #board-info #board-info-profile-img { /*프로필이미지*/
     width: 6em;
