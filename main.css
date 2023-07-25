@@ -1,14 +1,12 @@
 /*----------------- 전역 CSS -----------------*/
-
 html{
     font-family: 'SUITE-Regular';
     font-weight: 400;
     scroll-behavior: smooth;
 }
 
-/* 웹사이트 접속 시 마우스커서가 바뀌도록 수정*/
-html:hover{
-    cursor:url(./res/img/cursor.png), auto;
+html:hover{ /* 웹사이트 접속 시 마우스커서가 바뀌도록 수정*/
+    cursor:
 }
 
 
