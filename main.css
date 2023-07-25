@@ -6,11 +6,28 @@ body{
 }
 
 html:hover{ /* 웹사이트 접속 시 마우스커서가 바뀌도록 수정*/
-    cursor:url(./imgres/cursor.png), auto;
+    cursor:url("https://black-chi.github.io/bkchiTgdCss/imgres/cursor.png"), auto;
+}
+
+#board-info #board-info-profile-img {
+    width: 4.5em;
+    height: auto;
+    margin-right: 8px;
+}
+
+#board-info h1>a:not(.badge-live) {
+    padding-left: 30px;
+    font-size: 32px!important;
+    font-weight: 700;
+    color: #000000;
 }
 
 
 /*----------------- 인원수 -----------------*/
+
+.fa-user:before {
+    content: url("https://black-chi.github.io/bkchiTgdCss/imgres/18_3.png");
+}
 
 #board-info #viewers-area #viewers:before {
     content: "포식자 곁 캔냥이 ";
