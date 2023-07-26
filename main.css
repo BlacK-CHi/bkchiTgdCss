@@ -1,8 +1,15 @@
+@import url("https://black-chi.github.io/bkchiTgdCss/preload.css");
+
 /*----------------- 전역 CSS -----------------*/
 body{
     font-family: 'SUITE-Regular';
     font-weight: 500;
     height: auto !important;
+}
+
+html, body{
+height: auto !important;
+  background: url("https://black-chi.github.io/bkchiTgdCss/imgres/pattern.png");
 }
 
 html:hover{ /* 웹사이트 접속 시 마우스커서가 바뀌도록 수정*/
