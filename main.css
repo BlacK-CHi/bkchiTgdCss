@@ -25,14 +25,112 @@ html:hover{ /* 웹사이트 접속 시 마우스커서가 바뀌도록 수정*/
 
 #main #main-content>div.frame:hover{
     box-shadow: 0 0 0 3px #ffffff,
-                0 0 0 7px #40BDFF;
+                0 0 0 6px #40BDFF;
 
+}
+
+/*---------- 최상단 메뉴바 ------------*/
+#header-bar>.row, header #header-bar>.row {
+    border-radius: 10px 10px 15px 15px;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    border-top: 6px solid #40BDFF;
+    background: #fff;
+    background-color: #FFFFFF;
+    border-right: 0px solid #111;
+    border-bottom: 0px solid #111;
+    border-left: 0px solid #535555;
+    box-shadow: 0 0 0 3px #40BDFF;
+}
+
+
+
+
+
+/*----------------- 좌측메뉴 -----------------*/
+#main .menu-wrapper { /*배경틀*/
+    transition: all 0.1s linear;
+    
+    font-weight: 600;
+    border: px solid #40BDFF;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 0 0 0 3px #ffffff,
+                0 0 0 5px #40BDFF;
+}
+
+#main .menu-wrapper:hover{
+    box-shadow: 0 0 0 3px #ffffff,
+                0 0 0 6px #40BDFF;
+
+}
+#main .menu-wrapper>.header { /*메뉴항목*/
+    background: #40BDFF;
+    border-radius: 5px 5px 0 0;
+}
+
+#main .menu-wrapper>a, #main .menu-wrapper #fav-shortcut-area>a{
+  transition: all 0.1s linear;
+}
+
+#main .menu-wrapper>a:hover, #main .menu-wrapper #fav-shortcut-area>a:hover {
+  transform: scale(1.05);
+  background-color: #a7e0ff;
+  border-radius: 5px;
+}
+
+#main .menu-wrapper>a>em, #main .menu-wrapper #fav-shortcut-area>a>em { /*메뉴항목 아이콘*/
+    color: #40BDFF;
+    text-decoration: none;
+    font-style: normal;
+    width: 24px;
+    text-align: center;
+    display: inline-block;
+    font-weight: bold;
+}
+
+
+#main .menu-wrapper .spacer {
+    background: #a7e0ff;
+    display: block;
+    height: 0.25em;
+}
+
+
+/*----------------- 우측메뉴 -----------------*/
+
+#article-list #article-list-category.can-float {
+      border-top: 0px solid #6242ad;
+}
+
+#article-list #article-list-category.can-float>a{
+    transition: all 0.1s linear;
+    overflow: hidden;
+}
+
+#article-list #article-list-category.can-float>a.active{
+    background: #40BDFF;
+    transition: all 0.1s linear;
+}
+
+#article-list #article-list-category.can-float>a:hover{
+  background: #a7e0ff;
+  transform: scale(1);
+}
+
+.fa-home:before {
+    content: "";
+    color: white;
 }
 
 /*----------------- 헤더 -----------------*/
-#board-info{
-    height: 7em;
+#board-info
+{
+    height: 8em;
 }
+
 #board-info #board-info-profile-img { /*프로필이미지*/
     width: 6em;
     height: 6em;
@@ -70,40 +168,72 @@ html:hover{ /* 웹사이트 접속 시 마우스커서가 바뀌도록 수정*/
     padding-top: 3px;
 }
 
-    /*----------------- 접속인원, 점수 ---------------*/
-        .fa-user {
-        transition: all 0.1s linear;
-    }
-    .fa-user:before {
-        content: url("https://black-chi.github.io/bkchiTgdCss/imgres/18_3.png");
-        transition: all 0.1s linear;
-    }
 
-    .fa-user:hover {
-        content: url("https://black-chi.github.io/bkchiTgdCss/imgres/18_6.png");
-        transform: scale(1.3);
 
-    }
 
-    #board-info #score-area
-    {
+
+/*----------------- 접속인원, 점수 ---------------*/
+.fa-user {
+    transition: all 0.1s linear;
+}
+.fa-user:before {
+    content: url("https://black-chi.github.io/bkchiTgdCss/imgres/18_3.png");
+    transition: all 0.1s linear;
+}
+
+.fa-user:hover {
+    content: url("https://black-chi.github.io/bkchiTgdCss/imgres/18_6.png");
+    transform: scale(1.3);
+
+}
+
+#board-info #score-area
+{
+font-size: large;
+font-weight: 700;
+}
+
+#board-info #viewers-area 
+#viewers:before {
+    content: "포식자 곁 캔냥이 ";
+    cursor: text;
+}
+
+#board-info #viewers-area {
     font-size: large;
-    font-weight: 700;
-    }
+    font-weight: 900;
+    color: rgb(0 169 255);
+}
 
-    #board-info #viewers-area 
-    #viewers:before {
-        content: "포식자 곁 캔냥이 ";
-        cursor: text;
-    }
+#board-info #viewers-area #viewers:after {
+    content: "마리!"; 
+    cursor: text;
+}
 
-    #board-info #viewers-area {
-        font-size: large;
-        font-weight: 900;
-        color: rgb(0 169 255);
-    }
 
-    #board-info #viewers-area #viewers:after {
-        content: "마리!"; 
-        cursor: text;
-    }
+/*----------------- 접속인원, 점수 ---------------*/
+#article-list>.article-list-row>.item>.list-title {
+    text-align: left;
+    padding: 8px 0;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#article-list>.article-list-row.notice {
+    background-color: #d8f1ff;
+
+}
+
+#article-list>.article-list-row>.item>.list-title>a:visited {
+    color: #40BDFF !important;
+}
+
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+    background-color: #40BDFF;
+    border-color: #40BDFF;
+    color:#FFFFFF
+}
+
+.pagination>li>a, .pagination>li>span {
+    color: #000000;
+}
